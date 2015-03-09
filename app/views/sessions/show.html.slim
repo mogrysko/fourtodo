@@ -1,0 +1,5 @@
+h2 Welcome
+- @users.each do |user|
+  = button_to user.username, '/sessions', params: {user_id: user.id}
+  br
+= link_to 'New user', new_user_path
