@@ -1,4 +1,4 @@
-= form_for @task do |f|
+= form_for (@task.persisted? ? @task : [@list, @task]) do |f|
   => f.label :taskname, 'Task'
   = f.text_field :taskname
   => f.label :duedate, 'Due Date'

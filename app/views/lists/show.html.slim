@@ -1,0 +1,16 @@
+h2 Tasks
+- @list.tasks.each do |task|
+  strong> Task:
+  =task.taskname
+  br
+  strong> Due date:
+  =task.duedate
+  br
+  strong> Completed?
+  =task.completed
+  br
+  => link_to "Edit", edit_task_path(task)
+  =<> link_to "Delete", task_path(task), method: :delete
+  br
+  br
+= link_to "New task", new_list_task_path(@list)
