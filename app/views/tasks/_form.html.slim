@@ -1,0 +1,8 @@
+= form_for @task do |f|
+  => f.label :taskname, 'Task'
+  = f.text_field :taskname
+  => f.label :duedate, 'Due Date'
+  = f.date_field :duedate
+  => f.label :completed, 'Completed?'
+  = f.select :completed, [['Yes',true], ['No',false]]
+  = f.submit
